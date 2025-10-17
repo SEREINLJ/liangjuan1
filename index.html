@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>异步寻宝动画游戏</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 主页面 -->
+  <div id="main-page">
+    <h1>寻宝动画游戏</h1>
+    
+    <div class="progress-container">
+      <h3>寻宝进度</h3>
+      <div class="progress-bar">
+        <div class="progress" id="progress-bar"></div>
+      </div>
+      <p id="progress-text">0%</p>
+    </div>
+    
+    <div class="locations">
+      <div class="location-card" data-location="library">
+        <div class="location-img library-img"></div>
+        <h2>古老图书馆</h2>
+        <p class="location-desc">在这里寻找古老的线索和解开谜题的关键信息</p>
+        <button class="btn explore-btn">探索图书馆</button>
+      </div>
+      
+      <div class="location-card" data-location="temple">
+        <div class="location-img temple-img"></div>
+        <h2>神秘神庙</h2>
+        <p class="location-desc">根据线索找到神庙中的秘密通道和隐藏的NPC</p>
+        <button class="btn explore-btn">探索神庙</button>
+      </div>
+      
+      <div class="location-card" data-location="treasure">
+        <div class="location-img treasure-img"></div>
+        <h2>宝藏之地</h2>
+        <p class="location-desc">最终目的地，打开宝箱获取传说中的宝藏</p>
+        <button class="btn explore-btn">寻找宝藏</button>
+      </div>
+    </div>
+    
+    <button class="btn" id="reset-btn">重置游戏进度</button>
+  </div>
+  
+  <!-- 图书馆页面 -->
+  <div id="library-page" class="location-page">
+    <button class="back-btn">返回主菜单</button>
+    <button class="reset-btn">重置进度</button>
+    
+    <div class="location-content">
+      <h1>古老图书馆</h1>
+      <div id="treasure-log"></div>
+      <button class="btn" id="library-btn">开始寻找线索</button>
+    </div>
+  </div>
+  
+  <!-- 神庙页面 -->
+  <div id="temple-page" class="location-page">
+    <button class="back-btn">返回主菜单</button>
+    <button class="reset-btn">重置进度</button>
+    
+    <div class="location-content">
+      <h1>神秘神庙</h1>
+      <div id="temple-log"></div>
+      <button class="btn" id="temple-btn">开始探索神庙</button>
+    </div>
+  </div>
+  
+  <!-- 宝藏页面 -->
+  <div id="treasure-page" class="location-page">
+    <button class="back-btn">返回主菜单</button>
+    <button class="reset-btn">重置进度</button>
+    
+    <div class="location-content">
+      <h1>宝藏之地</h1>
+      <div id="treasure-log-final"></div>
+      <button class="btn" id="treasure-btn">打开宝藏</button>
+    </div>
+  </div>
+  
+  <!-- 音频控制 -->
+  <button class="audio-control" id="audio-toggle">🔊</button>
+  
+  <script src="xun.js"></script>
+</body>
+</html>
